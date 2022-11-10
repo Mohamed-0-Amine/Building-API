@@ -32,7 +32,9 @@ SECRET_KEY = 'django-insecure-u9qg1dnt*z*40iil6j@h2#idrfzj$hbec(gcqi6ncakp&$p3@z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'my-api-practice-project.herokuapp.com'
+]
 
 
 # Application definition
@@ -81,12 +83,12 @@ WSGI_APPLICATION = 'rapidapipractice.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 # Heroku Update database configuration from $DATABASE_URL.
 db_from_env= dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
